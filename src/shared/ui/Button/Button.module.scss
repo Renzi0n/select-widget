@@ -1,0 +1,23 @@
+.accept {
+  background: rgb(81, 159, 3);
+}
+
+.decline {
+  background: rgb(159, 41, 3);
+}
+
+.button {
+  max-width: 200px;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-weight: 500;
+  transition: box-shadow 0.25s;
+
+  &:hover {
+    box-shadow: 0px 0px 12px 2px rgb(193 193 193);
+  }
+
+  &:active {
+    box-shadow: inset 0px 0px 12px 2px rgb(193 193 193);
+  }
+}

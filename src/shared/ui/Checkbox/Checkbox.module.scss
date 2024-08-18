@@ -1,0 +1,58 @@
+.checkboxContainer {
+  display: flex;
+  align-items: center;
+  width: max-content;
+}
+
+.checkbox {
+  display: none;
+
+  &:checked + .checkmark::after {
+    opacity: 1;
+  }
+
+  &:checked ~ .label {
+    font-weight: 500;
+  }
+
+  &:disabled + .checkmark {
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: default;
+  }
+
+  &:disabled ~ .label {
+    color: rgb(110, 110, 110);
+    cursor: default;
+  }
+}
+
+.label {
+  transition: font-weight 0.1s ease-in;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.checkmark {
+  width: 20px;
+  height: 20px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(206, 206, 206);
+  border-radius: 4px;
+  margin-right: 8px;
+  position: relative;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 0;
+    width: 6px;
+    height: 12px;
+    border: solid rgb(0, 128, 0);
+    border-width: 0 3px 3px 0;
+    opacity: 0;
+    transform: rotate(45deg);
+    transition: opacity 0.1s ease-in-out;
+  }
+}

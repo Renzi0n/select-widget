@@ -1,0 +1,27 @@
+.inputContainer {
+  font-weight: 500;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  width: max-content;
+}
+
+.input {
+  padding: 10px;
+  min-width: 140px;
+  border: 1px solid rgb(230, 230, 230);
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  font-size: 16px;
+  color: rgba(47, 47, 47, 0.87);
+
+  &:focus {
+    border-color: rgba(81, 159, 3, 1);
+    outline: none;
+    box-shadow: rgba(0, 123, 255, 0.2) 0px 0px 5px;
+  }
+}
+
+.disableCaret {
+  caret-color: transparent;
+}

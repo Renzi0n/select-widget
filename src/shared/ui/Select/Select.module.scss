@@ -1,0 +1,39 @@
+.selectContainer {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  width: max-content;
+}
+
+.select {
+  position: relative;
+}
+
+.selected {
+  padding: 10px;
+  border: 1px solid rgb(230, 230, 230);
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 2px);
+  right: 0;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 10px;
+  background-color: rgb(255, 255, 255);
+  min-width: 200px;
+
+  z-index: 1000;
+}
+
+.option {
+  padding: 10px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgb(230, 230, 230);
+  }
+}
