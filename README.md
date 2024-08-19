@@ -2,4 +2,4 @@
 
 Stack: FSD/react/vite/css modules
 
-Link: https://select-widget-3bu59w0ln-renzi0ns-projects.vercel.app/
+Link: https://select-widget.vercel.app/
