@@ -5,15 +5,12 @@ import { EditItemsPopup, useSelectedItems } from "widgets";
 import styles from "./main.module.scss";
 
 export const MainPage = () => {
-  // Popup
   const [isPopupVisible, setPopupVisible] = useState(false);
   const openPopup = () => setPopupVisible(true);
   const closePopup = () => setPopupVisible(false);
 
-  // Selected items of all app
   const { selectedItems, deleteSelectedItem, setSelectedItems } =
     useSelectedItems();
-
   const onSaveItems = (savedItems: TItem[]) => {
     setSelectedItems(savedItems);
     closePopup();

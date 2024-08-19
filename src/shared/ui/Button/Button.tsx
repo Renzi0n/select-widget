@@ -1,6 +1,6 @@
 import { ButtonHTMLAttributes } from "react";
 import cn from "classnames";
-import styles from "./button.module.scss";
+import styles from "./Button.module.scss";
 
 type TButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   variant?: "accept" | "decline";
