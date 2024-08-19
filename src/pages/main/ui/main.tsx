@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Button, TItem } from "shared";
 import { EditItemsPopup, useSelectedItems } from "widgets";
 import styles from "./main.module.scss";
+import { SelectedItemsStorage } from "../lib/localeStorage";
 
 export const MainPage = () => {
   const [isPopupVisible, setPopupVisible] = useState(false);
@@ -10,10 +11,17 @@ export const MainPage = () => {
   const closePopup = () => setPopupVisible(false);
 
   const { selectedItems, deleteSelectedItem, setSelectedItems } =
-    useSelectedItems();
+    useSelectedItems(SelectedItemsStorage.getSelectedItems());
+
   const onSaveItems = (savedItems: TItem[]) => {
     setSelectedItems(savedItems);
+    SelectedItemsStorage.setSelectedItems(savedItems);
     closePopup();
+  };
+
+  const deleteSelectedItemWithLocaleStorage = (value: number) => {
+    deleteSelectedItem(value);
+    SelectedItemsStorage.deleteItem(value);
   };
 
   return (
@@ -23,7 +31,7 @@ export const MainPage = () => {
       <SelectedItemsList
         items={selectedItems}
         label={`You currently have ${selectedItems.length} selected items`}
-        onItemClick={deleteSelectedItem}
+        onItemClick={deleteSelectedItemWithLocaleStorage}
       />
 
       <Button onClick={openPopup}>Change my choice</Button>
