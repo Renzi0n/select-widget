@@ -41,9 +41,10 @@
 .popupFooter {
   display: flex;
   justify-content: flex-start;
-  gap: 10px;
+  gap: 20px;
 }
 
 .footerButton {
   padding: 8px 12px;
+  min-width: 100px;
 }

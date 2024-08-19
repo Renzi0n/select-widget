@@ -24,6 +24,11 @@ export const MainPage = () => {
     SelectedItemsStorage.deleteItem(value);
   };
 
+  const resetSelectedItems = () => {
+    setSelectedItems([]);
+    SelectedItemsStorage.setSelectedItems([]);
+  };
+
   return (
     <div className={styles.pageWrapper}>
       <h1>Select items</h1>
@@ -35,6 +40,10 @@ export const MainPage = () => {
       />
 
       <Button onClick={openPopup}>Change my choice</Button>
+
+      <Button variant="decline" onClick={resetSelectedItems}>
+        Reset items
+      </Button>
 
       {isPopupVisible && (
         <EditItemsPopup
