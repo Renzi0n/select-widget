@@ -15,21 +15,25 @@ export const ItemsList: FC<TItemsListProps> = memo(
       [selectedItems]
     );
 
-    return items.map(({ label, value }) => {
-      const isChecked = selectedValues.includes(value);
-      const isDisabled =
-        selectedItems.length === MAX_SELECTED_ITEMS && !isChecked;
+    return items.length ? (
+      items.map(({ label, value }) => {
+        const isChecked = selectedValues.includes(value);
+        const isDisabled =
+          selectedItems.length === MAX_SELECTED_ITEMS && !isChecked;
 
-      return (
-        <Checkbox
-          key={value + label}
-          label={label}
-          value={value}
-          checked={isChecked}
-          disabled={isDisabled}
-          onChange={onCheckboxChange}
-        />
-      );
-    });
+        return (
+          <Checkbox
+            key={value + label}
+            label={label}
+            value={value}
+            checked={isChecked}
+            disabled={isDisabled}
+            onChange={onCheckboxChange}
+          />
+        );
+      })
+    ) : (
+      <p>No items</p>
+    );
   }
 );
