@@ -11,9 +11,9 @@
 
 .selected {
   padding: 10px;
-  border: 1px solid rgb(230, 230, 230);
+  border: 1px solid var(--color-light-secondary);
   border-radius: 10px;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--color-light);
   cursor: pointer;
 }
 
@@ -23,7 +23,7 @@
   right: 0;
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 10px;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--color-light);
   min-width: 200px;
 
   z-index: 1000;
@@ -34,6 +34,6 @@
   cursor: pointer;
 
   &:hover {
-    background-color: rgb(230, 230, 230);
+    background-color: var(--color-light-secondary);
   }
 }

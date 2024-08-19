@@ -9,9 +9,9 @@
 .input {
   padding: 10px;
   min-width: 140px;
-  border: 1px solid rgb(230, 230, 230);
+  border: 1px solid var(--color-light-secondary);
   border-radius: 10px;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--color-light);
   font-size: 16px;
   color: rgba(47, 47, 47, 0.87);
 

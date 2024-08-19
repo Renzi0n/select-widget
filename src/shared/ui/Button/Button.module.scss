@@ -1,9 +1,9 @@
 .accept {
-  background: rgb(81, 159, 3);
+  background: var(--color-accept);
 }
 
 .decline {
-  background: rgb(159, 41, 3);
+  background: var(--color-decline);
 }
 
 .button {
@@ -14,10 +14,10 @@
   transition: box-shadow 0.25s;
 
   &:hover {
-    box-shadow: 0px 0px 12px 2px rgb(193 193 193);
+    box-shadow: 0px 0px 8px 2px var(--color-dark-secondary);
   }
 
   &:active {
-    box-shadow: inset 0px 0px 12px 2px rgb(193 193 193);
+    box-shadow: inset 0px 0px 8px 2px var(--color-dark-secondary);
   }
 }

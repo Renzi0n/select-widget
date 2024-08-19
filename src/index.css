@@ -11,6 +11,14 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* vars */
+  --color-dark: rgb(0, 0, 0);
+  --color-dark-secondary: rgb(144, 144, 144);
+  --color-light: rgb(255, 255, 255);
+  --color-light-secondary: rgb(230, 230, 230);
+  --color-accept: rgb(81, 159, 3);
+  --color-decline: rgb(159, 41, 3);
 }
 
 p,

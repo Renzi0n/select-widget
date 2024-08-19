@@ -35,7 +35,7 @@
 .checkmark {
   width: 20px;
   height: 20px;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--color-light);
   border: 1px solid rgb(206, 206, 206);
   border-radius: 4px;
   margin-right: 8px;
@@ -49,7 +49,7 @@
     top: 0;
     width: 6px;
     height: 12px;
-    border: solid rgb(0, 128, 0);
+    border: solid var(--color-accept);
     border-width: 0 3px 3px 0;
     opacity: 0;
     transform: rotate(45deg);
